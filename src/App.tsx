@@ -239,9 +239,9 @@ export default function App() {
           <motion.h1 
             initial={{ opacity: 0, y: 20 }}
             animate={{ opacity: 1, y: 0 }}
-            className="text-4xl sm:text-5xl md:text-6xl lg:text-7xl font-black text-gray-900 leading-[0.85] sm:leading-[0.9] md:leading-[0.95] mb-6 tracking-[-0.05em] sm:tracking-tighter max-w-6xl mx-auto px-0 sm:px-2"
+            className="text-3xl sm:text-4xl md:text-5xl lg:text-6xl font-black text-gray-900 leading-[0.95] sm:leading-[1] md:leading-[1.05] mb-6 tracking-[-0.05em] sm:tracking-tighter max-w-6xl mx-auto px-0 sm:px-2"
           >
-            <span className="block sm:hidden text-[2.55rem] leading-[0.88] tracking-[-0.08em] px-0">
+            <span className="block sm:hidden text-[2.2rem] leading-[0.95] tracking-[-0.08em] px-0">
               <span className="block whitespace-nowrap text-[#10B981]">+250 Dinâmicas que</span>
               <span className="block whitespace-nowrap">Tornam a Segurança</span>
               <span className="block whitespace-nowrap">do Trabalho Mais</span>
@@ -270,7 +270,7 @@ export default function App() {
         <div className="max-w-2xl mx-auto flex flex-col items-center gap-3">
           {[
             "Uso imediato nas empresas",
-            "Ideal para DDS, SIPAT e treinamentos",
+            "Para DDS, SIPAT e treinamentos",
             "Aplicação simples e direta",
             "Alinhado às normas regulamentadoras (NRs)"
           ].map((feature, i) => (
