@@ -460,7 +460,7 @@ export default function App() {
                 <p className="text-gray-500 text-xs mb-4 text-center">Para transformar seus treinamentos</p>
                 <div className="flex items-start text-[#10B981] font-black mb-1">
                   <span className="text-lg mt-2">R$</span>
-                  <span className="text-6xl">37</span>
+                  <span className="text-6xl">27</span>
                   <div className="flex flex-col items-start mt-2">
                     <span className="text-2xl">,00</span>
                   </div>
