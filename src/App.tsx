@@ -19,7 +19,9 @@ import {
   HardHat,
   FileText,
   Download,
-  Headphones 
+  Headphones,
+  Mail,
+  Calendar
 } from 'lucide-react';
 import { motion, AnimatePresence } from 'motion/react';
 import React, { useState } from 'react';
@@ -355,11 +357,9 @@ export default function App() {
           
           <div className="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-3 gap-6 sm:gap-8">
             {[
-              { title: "+15 Jogos e Simulações de Segurança", oldPrice: "37", price: "GRATUITO", img: "https://i.ibb.co/Zp3zckP7/Chat-GPT-Image-11-de-abr-de-2026-13-35-51.png", desc: "Simulações práticas para ensinar segurança de forma mais visual, dinâmica e fácil de entender." },
-              { title: "Checklist Diário de Segurança", oldPrice: "47", price: "GRATUITO", img: "https://i.ibb.co/JRqXt77T/Chat-GPT-Image-11-de-abr-de-2026-13-55-22.png", desc: "Modelo simples para acompanhar rotinas e identificar riscos no dia a dia." },
-              { title: "Modelo de Ficha de Entrega de EPI", oldPrice: "47", price: "GRATUITO", img: "https://i.ibb.co/Y7smtGcN/dd122de5-a63d-4a6c-8783-513a4712e6f6.png", desc: "Documento pronto para registrar e controlar a entrega de EPIs." },
-              { title: "Banco de Exemplos de Situações de Risco", oldPrice: "67", price: "GRATUITO", img: "https://i.ibb.co/4nFW1Bjj/0e13d21b-3c6a-44b2-adbf-92128d5e897b.png", desc: "Cenários prontos para usar em dinâmicas e gerar reflexão com a equipe." },
-              { title: "Atualizações Mensais", oldPrice: "97", price: "GRATUITO", img: "https://i.ibb.co/4ZJFDVnq/8857b584-deec-45b7-9903-ad03a59971c4.png", desc: "Novas dinâmicas adicionadas constantemente para você sempre ter material novo." }
+              { title: "Certificado de Conclusão", oldPrice: "27", price: "GRATUITO", img: "https://i.ibb.co/v6yd5jS3/Chat-GPT-Image-16-de-abr-de-2026-17-39-59.png", desc: "Certificado para comprovar a conclusão do material, contribuindo para o desenvolvimento profissional e fortalecimento do seu portfólio na área de segurança do trabalho." },
+              { title: "Quiz Interativo", oldPrice: "33", price: "GRATUITO", img: "https://i.ibb.co/V0T5s2DF/Chat-GPT-Image-16-de-abr-de-2026-17-38-36.png", desc: "Atividades em perguntas e respostas para testar o conhecimento dos colaboradores, deixando os treinamentos mais dinâmicos e fáceis de aplicar." },
+              { title: "Cartazes Prontos de Segurança do Trabalho", oldPrice: "37", price: "GRATUITO", img: "https://i.ibb.co/MkYNqNs9/Chat-GPT-Image-16-de-abr-de-2026-17-37-56.png", desc: "Cartazes prontos para imprimir e usar na empresa, reforçando regras de segurança e prevenção de acidentes de forma prática." }
             ].map((bonus, i) => (
               <motion.div 
                 key={i}
@@ -370,7 +370,7 @@ export default function App() {
                 className="bg-white rounded-2xl overflow-hidden border-2 border-[#F97316] shadow-md flex flex-col"
               >
                 <div className="w-full bg-[#FDF6E3] flex items-center justify-center border-b border-gray-100">
-                  <img alt={bonus.title} className="w-full h-48 object-cover" src={bonus.img} referrerPolicy="no-referrer" loading="lazy" decoding="async" />
+                  <img alt={bonus.title} className="w-full aspect-[1536/1024] object-cover" src={bonus.img} referrerPolicy="no-referrer" loading="lazy" decoding="async" />
                 </div>
                 <div className="p-4 sm:p-5 text-center flex flex-col flex-grow justify-center">
                   <h4 className="font-black text-[#0F172A] text-base sm:text-lg mb-1.5 leading-tight">{bonus.title}</h4>
@@ -420,19 +420,7 @@ export default function App() {
                   <div className="bg-[#10B981] rounded-full p-1 flex-shrink-0">
                     <Check className="w-3 h-3 text-white" strokeWidth={4} />
                   </div>
-                  Para DDS, SIPAT e Treinamentos
-                </li>
-                <li className="flex items-center gap-2 text-gray-700 font-bold text-xs sm:text-sm">
-                  <div className="bg-[#10B981] rounded-full p-1 flex-shrink-0">
-                    <Check className="w-3 h-3 text-white" strokeWidth={4} />
-                  </div>
-                  Acesso digital imediato e vitalício
-                </li>
-                <li className="flex items-center gap-2 text-gray-700 font-bold text-xs sm:text-sm">
-                  <div className="bg-[#10B981] rounded-full p-1 flex-shrink-0">
-                    <Check className="w-3 h-3 text-white" strokeWidth={4} />
-                  </div>
-                  Materiais 100% Baixáveis
+                  Acesso digital
                 </li>
                 <li className="flex items-center gap-2 text-gray-700 font-bold text-xs sm:text-sm">
                   <div className="bg-[#10B981] rounded-full p-1 flex-shrink-0">
@@ -445,6 +433,12 @@ export default function App() {
                     <X className="w-3 h-3 text-white" strokeWidth={4} />
                   </div>
                   Bônus Exclusivos
+                </li>
+                <li className="flex items-center gap-2 text-gray-700 font-bold text-xs sm:text-sm">
+                  <div className="bg-red-500 rounded-full p-1 flex-shrink-0">
+                    <X className="w-3 h-3 text-white" strokeWidth={4} />
+                  </div>
+                  Atualizações mensais
                 </li>
               </ul>
               
@@ -466,7 +460,7 @@ export default function App() {
                 <p className="text-gray-500 text-xs mb-4 text-center">Para transformar seus treinamentos</p>
                 <div className="flex items-start text-[#10B981] font-black mb-1">
                   <span className="text-lg mt-2">R$</span>
-                  <span className="text-6xl">27</span>
+                  <span className="text-6xl">37</span>
                   <div className="flex flex-col items-start mt-2">
                     <span className="text-2xl">,00</span>
                   </div>
@@ -496,14 +490,12 @@ export default function App() {
                 <div className="w-full bg-white rounded-xl p-3 border border-[#DCFCE7] mb-4 text-left">
                   <div className="flex items-center gap-2 mb-2 text-pink-500 font-bold text-xs uppercase">
                     <Gift className="w-3 h-3" />
-                    Mais de R$ 198 reais em bônus GRÁTIS:
+                    Mais de R$ 97 reais em bônus GRÁTIS:
                   </div>
                   <ul className="space-y-1.5 text-gray-600 text-[11px] font-medium">
-                    <li className="flex items-center gap-2">• +15 Jogos e Simulações de Segurança</li>
-                    <li className="flex items-center gap-2">• Checklist Diário de Segurança</li>
-                    <li className="flex items-center gap-2">• Modelo de Ficha de Entrega de EPI</li>
-                    <li className="flex items-center gap-2">• Banco de Exemplos de Situações de Risco</li>
-                    <li className="flex items-center gap-2">• Atualizações Mensais</li>
+                    <li className="flex items-center gap-2">• Certificado de Conclusão</li>
+                    <li className="flex items-center gap-2">• Quiz Interativo</li>
+                    <li className="flex items-center gap-2">• Cartazes Prontos de SST</li>
                   </ul>
                 </div>
 
@@ -525,6 +517,12 @@ export default function App() {
                       <Zap className="w-3 h-3 text-white" />
                     </div>
                     Aplicação Imediata
+                  </div>
+                  <div className="flex items-center gap-2 text-[#10B981] font-bold text-xs sm:text-sm">
+                    <div className="bg-[#10B981] rounded-full p-1 flex-shrink-0">
+                      <Calendar className="w-3 h-3 text-white" />
+                    </div>
+                    Atualizações Mensais
                   </div>
                   <div className="flex items-center gap-2 text-[#10B981] font-bold text-xs sm:text-sm">
                     <div className="bg-[#10B981] rounded-full p-1 flex-shrink-0">
@@ -557,6 +555,14 @@ export default function App() {
                 </div>
               </div>
             </div>
+          </div>
+
+          {/* Delivery Notice */}
+          <div className="mt-8 md:mt-12 bg-white rounded-2xl border-2 border-[#10B981] p-4 flex items-center gap-4 shadow-sm max-w-sm mx-auto">
+            <div className="bg-[#10B981] rounded-full p-2 shrink-0">
+              <Mail className="w-6 h-6 text-white" />
+            </div>
+            <p className="text-gray-900 font-bold text-sm leading-snug">Após a compra, você recebe acesso ao Material diretamente no seu E-mail</p>
           </div>
         </div>
       </section>
