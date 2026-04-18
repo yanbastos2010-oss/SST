@@ -22,6 +22,22 @@
     <link rel="preconnect" href="https://fonts.googleapis.com" />
     <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin />
     <link rel="preload" href="https://imgur.com/u20c05W.mp4" as="video" type="video/mp4" />
+    <script>
+      window.onload = function() {
+        const urlParams = window.location.search;
+        if (urlParams) {
+          const links = document.getElementsByTagName('a');
+          for (let i = 0; i < links.length; i++) {
+            let href = links[i].getAttribute('href');
+            if (href && !href.startsWith('#') && !href.startsWith('javascript:')) {
+              // Verifica se o link já tem parâmetros para usar ? ou &
+              const separator = href.indexOf('?') === -1 ? '?' : '&';
+              links[i].href = href + separator + urlParams.substring(1);
+            }
+          }
+        }
+      };
+    </script>
   </head>
   <body>
     <div id="root"></div>

@@ -205,19 +205,19 @@ export default function App() {
                   </div>
                 </div>
 
-                <button 
-                  onClick={() => window.location.href = 'https://checkout.pagseguropay.shop/VCCL1O8SCXF9' + window.location.search}
-                  className="w-full bg-[#00C853] hover:bg-[#00E676] text-white font-black py-3 px-4 rounded-xl text-sm sm:text-base uppercase tracking-wide transition-colors cursor-pointer mb-4 text-center leading-tight shadow-md"
+                <a 
+                  href="https://checkout.pagseguropay.shop/VCCL1O8SCXF9"
+                  className="w-full bg-[#00C853] hover:bg-[#00E676] text-white font-black py-3 px-4 rounded-xl text-sm sm:text-base uppercase tracking-wide transition-colors cursor-pointer mb-4 text-center leading-tight shadow-md flex items-center justify-center h-12"
                 >
                   SIM, QUERO O PLANO COMPLETO!
-                </button>
+                </a>
 
-                <button 
-                  onClick={() => window.location.href = 'https://checkout.pagseguropay.shop/VCCL1O8SCXF8' + window.location.search}
-                  className="w-full bg-white border-2 border-[#E2E8F0] text-[#94A3B8] font-black py-3 px-4 rounded-xl text-sm sm:text-base transition-colors cursor-pointer text-center leading-tight"
+                <a 
+                  href="https://checkout.pagseguropay.shop/VCCL1O8SCXF8"
+                  className="w-full bg-white border-2 border-[#E2E8F0] text-[#94A3B8] font-black py-3 px-4 rounded-xl text-sm sm:text-base transition-colors cursor-pointer text-center leading-tight flex items-center justify-center h-12"
                 >
                   Não, prefiro o plano básico
-                </button>
+                </a>
               </div>
             </motion.div>
           </div>
@@ -544,12 +544,12 @@ export default function App() {
                   </div>
                 </div>
 
-                <button 
-                  onClick={() => window.location.href = 'https://checkout.pagseguropay.shop/VCCL1O8SCXF6' + window.location.search}
-                  className="w-[90%] mx-auto bg-[#10B981] hover:bg-[#059669] text-white font-black py-2.5 rounded-lg uppercase tracking-wide transition shadow-lg animate-scale-pulse text-lg block text-center cursor-pointer"
+                <a 
+                  href="https://checkout.pagseguropay.shop/VCCL1O8SCXF6"
+                  className="w-[90%] mx-auto bg-[#10B981] hover:bg-[#059669] text-white font-black py-2.5 rounded-lg uppercase tracking-wide transition shadow-lg animate-scale-pulse text-lg flex items-center justify-center cursor-pointer h-12"
                 >
                   Comprar Agora
-                </button>
+                </a>
                 <div className="text-center mt-3 text-gray-400 text-xs flex items-center justify-center gap-1">
                   <LockOpen className="w-3 h-3" /> Ambiente seguro para pagamentos
                 </div>
