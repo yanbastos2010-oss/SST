@@ -612,7 +612,7 @@ export default function App() {
       {/* FAQ Section */}
       <section className="bg-white py-12 px-4">
         <div className="max-w-2xl mx-auto">
-          <h2 className="text-3xl sm:text-4xl font-black text-gray-900 text-center mb-8">Perguntas <span className="text-[#10B981]">Frequentes</span></h2>
+          <h2 className="text-3xl sm:text-4xl font-black text-gray-900 text-center mb-8">Perguntas Frequentes</h2>
           <div className="space-y-3">
             {[
               { q: "Como recebo o material?", a: "Você recebe acesso imediato no seu e-mail logo após a confirmação do pagamento." },
