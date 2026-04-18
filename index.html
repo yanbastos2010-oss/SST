@@ -16,65 +16,6 @@
       a.setAttribute("src", "https://cdn.utmify.com.br/scripts/pixel/pixel.js");
       document.head.appendChild(a);
     </script>
-    <script>
-      (function() {
-        const params = new URLSearchParams(window.location.search);
-        if (params.toString() === "") {
-          window.redirectWithParams = function(url) { window.location.href = url; };
-          return;
-        }
-
-        function updateUrl(url) {
-          if (!url || typeof url !== 'string') return url;
-          if (url.startsWith('#') || url.startsWith('javascript:') || url.startsWith('tel:') || url.startsWith('mailto:')) return url;
-          
-          try {
-            const parsedUrl = new URL(url, window.location.origin);
-            params.forEach((value, key) => {
-              if (!parsedUrl.searchParams.has(key)) {
-                parsedUrl.searchParams.set(key, value);
-              }
-            });
-            return parsedUrl.toString();
-          } catch (e) {
-            return url;
-          }
-        }
-
-        function processLinks() {
-          document.querySelectorAll('a[href]').forEach(link => {
-            const originalHref = link.getAttribute('href');
-            if (!originalHref || originalHref.startsWith('#')) return;
-            const newHref = updateUrl(originalHref);
-            if (newHref !== originalHref) {
-              link.setAttribute('href', newHref);
-            }
-          });
-        }
-
-        // MutationObserver for dynamic React content
-        const observer = new MutationObserver((mutations) => {
-          processLinks();
-        });
-        
-        // Start observing after DOM is ready
-        if (document.body) {
-          observer.observe(document.body, { childList: true, subtree: true });
-        } else {
-          window.addEventListener('DOMContentLoaded', () => {
-            observer.observe(document.body, { childList: true, subtree: true });
-          });
-        }
-
-        // Initial run
-        processLinks();
-        
-        // Global helper for React buttons
-        window.redirectWithParams = function(targetUrl) {
-          window.location.href = updateUrl(targetUrl);
-        };
-      })();
-    </script>
     <meta charset="UTF-8" />
     <meta name="viewport" content="width=device-width, initial-scale=1.0" />
     <title>Dinâmicas SST</title>
