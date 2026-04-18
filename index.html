@@ -16,6 +16,22 @@
       a.setAttribute("src", "https://cdn.utmify.com.br/scripts/pixel/pixel.js");
       document.head.appendChild(a);
     </script>
+    <script>
+      function redirectWithParams(destination) {
+        const currentParams = window.location.search;
+
+        if (!currentParams) {
+          window.location.href = destination;
+          return;
+        }
+
+        if (destination.includes("?")) {
+          window.location.href = destination + "&" + currentParams.substring(1);
+        } else {
+          window.location.href = destination + currentParams;
+        }
+      }
+    </script>
     <meta charset="UTF-8" />
     <meta name="viewport" content="width=device-width, initial-scale=1.0" />
     <title>Dinâmicas SST</title>
