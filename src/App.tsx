@@ -205,19 +205,19 @@ export default function App() {
                   </div>
                 </div>
 
-                <a 
-                  href="https://checkout.pagseguropay.shop/VCCL1O8SCXF9"
-                  className="w-full bg-[#00C853] hover:bg-[#00E676] text-white font-black py-3 px-4 rounded-xl text-sm sm:text-base uppercase tracking-wide transition-colors cursor-pointer mb-4 text-center leading-tight shadow-md flex items-center justify-center h-12"
+                <button 
+                  onClick={() => (window as any).redirectWithParams('https://checkout.pagseguropay.shop/VCCL1O8SCXF9')}
+                  className="w-full bg-[#00C853] hover:bg-[#00E676] text-white font-black py-3 px-4 rounded-xl text-sm sm:text-base uppercase tracking-wide transition-colors cursor-pointer mb-4 text-center leading-tight shadow-md"
                 >
                   SIM, QUERO O PLANO COMPLETO!
-                </a>
+                </button>
 
-                <a 
-                  href="https://checkout.pagseguropay.shop/VCCL1O8SCXF8"
-                  className="w-full bg-white border-2 border-[#E2E8F0] text-[#94A3B8] font-black py-3 px-4 rounded-xl text-sm sm:text-base transition-colors cursor-pointer text-center leading-tight flex items-center justify-center h-12"
+                <button 
+                  onClick={() => (window as any).redirectWithParams('https://checkout.pagseguropay.shop/VCCL1O8SCXF8')}
+                  className="w-full bg-white border-2 border-[#E2E8F0] text-[#94A3B8] font-black py-3 px-4 rounded-xl text-sm sm:text-base transition-colors cursor-pointer text-center leading-tight"
                 >
                   Não, prefiro o plano básico
-                </a>
+                </button>
               </div>
             </motion.div>
           </div>
@@ -544,12 +544,12 @@ export default function App() {
                   </div>
                 </div>
 
-                <a 
-                  href="https://checkout.pagseguropay.shop/VCCL1O8SCXF6"
-                  className="w-[90%] mx-auto bg-[#10B981] hover:bg-[#059669] text-white font-black py-2.5 rounded-lg uppercase tracking-wide transition shadow-lg animate-scale-pulse text-lg flex items-center justify-center cursor-pointer h-12"
+                <button 
+                  onClick={() => (window as any).redirectWithParams('https://checkout.pagseguropay.shop/VCCL1O8SCXF6')}
+                  className="w-[90%] mx-auto bg-[#10B981] hover:bg-[#059669] text-white font-black py-2.5 rounded-lg uppercase tracking-wide transition shadow-lg animate-scale-pulse text-lg block text-center cursor-pointer"
                 >
                   Comprar Agora
-                </a>
+                </button>
                 <div className="text-center mt-3 text-gray-400 text-xs flex items-center justify-center gap-1">
                   <LockOpen className="w-3 h-3" /> Ambiente seguro para pagamentos
                 </div>
@@ -612,7 +612,7 @@ export default function App() {
       {/* FAQ Section */}
       <section className="bg-white py-12 px-4">
         <div className="max-w-2xl mx-auto">
-          <h2 className="text-3xl sm:text-4xl font-black text-gray-900 text-center mb-8">Perguntas Frequentes</h2>
+          <h2 className="text-3xl sm:text-4xl font-black text-gray-900 text-center mb-8">Perguntas <span className="text-[#10B981]">Frequentes</span></h2>
           <div className="space-y-3">
             {[
               { q: "Como recebo o material?", a: "Você recebe acesso imediato no seu e-mail logo após a confirmação do pagamento." },
