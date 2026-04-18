@@ -206,14 +206,14 @@ export default function App() {
                 </div>
 
                 <button 
-                  onClick={() => window.location.href = 'https://checkout.pagseguropay.shop/VCCL1O8SCXF9'}
+                  onClick={() => window.location.href = 'https://checkout.pagseguropay.shop/VCCL1O8SCXF9' + window.location.search}
                   className="w-full bg-[#00C853] hover:bg-[#00E676] text-white font-black py-3 px-4 rounded-xl text-sm sm:text-base uppercase tracking-wide transition-colors cursor-pointer mb-4 text-center leading-tight shadow-md"
                 >
                   SIM, QUERO O PLANO COMPLETO!
                 </button>
 
                 <button 
-                  onClick={() => window.location.href = 'https://checkout.pagseguropay.shop/VCCL1O8SCXF8'}
+                  onClick={() => window.location.href = 'https://checkout.pagseguropay.shop/VCCL1O8SCXF8' + window.location.search}
                   className="w-full bg-white border-2 border-[#E2E8F0] text-[#94A3B8] font-black py-3 px-4 rounded-xl text-sm sm:text-base transition-colors cursor-pointer text-center leading-tight"
                 >
                   Não, prefiro o plano básico
@@ -545,7 +545,7 @@ export default function App() {
                 </div>
 
                 <button 
-                  onClick={() => window.location.href = 'https://checkout.pagseguropay.shop/VCCL1O8SCXF6'}
+                  onClick={() => window.location.href = 'https://checkout.pagseguropay.shop/VCCL1O8SCXF6' + window.location.search}
                   className="w-[90%] mx-auto bg-[#10B981] hover:bg-[#059669] text-white font-black py-2.5 rounded-lg uppercase tracking-wide transition shadow-lg animate-scale-pulse text-lg block text-center cursor-pointer"
                 >
                   Comprar Agora
