@@ -18,7 +18,7 @@
     </script>
     <script>
       function redirectWithParams(destination) {
-        const currentParams = window.location.search;
+        var currentParams = window.location.search;
 
         if (!currentParams) {
           window.location.href = destination;
@@ -32,11 +32,42 @@
         }
       }
     </script>
+    <script>
+      // Back Redirect - Acionado quando o usuário clica em Voltar no navegador
+      const link = 'https://backredirectsst.vercel.app'; // Adicionado https:// para garantir o redirecionamento correto para fora do site atual
+
+      function setBackRedirect(url) {
+        let urlBackRedirect = url;
+        urlBackRedirect =
+          urlBackRedirect.trim() +
+          (urlBackRedirect.indexOf('?') > 0 ? '&' : '?') +
+          document.location.search.replace('?', '').toString();
+
+        history.pushState({}, '', location.href);
+        history.pushState({}, '', location.href);
+        history.pushState({}, '', location.href);
+
+        window.addEventListener('popstate', () => {
+          console.log('onpopstate', urlBackRedirect);
+          setTimeout(() => {
+            location.href = urlBackRedirect;
+          }, 1);
+        });
+      }
+
+      setBackRedirect(link);
+    </script>
     <meta charset="UTF-8" />
-    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
-    <title>Dinâmicas SST</title>
     <link rel="preconnect" href="https://fonts.googleapis.com" />
     <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin />
+    <link rel="dns-prefetch" href="https://fonts.googleapis.com" />
+    <link rel="preconnect" href="https://cdn.utmify.com.br" />
+    <link rel="preconnect" href="https://checkout.pagseguropay.shop" />
+    <link rel="preconnect" href="https://i.ibb.co" />
+    <link rel="dns-prefetch" href="https://checkout.pagseguropay.shop" />
+    <link rel="dns-prefetch" href="https://i.ibb.co" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>Dinâmicas SST</title>
     <link rel="preload" href="https://imgur.com/u20c05W.mp4" as="video" type="video/mp4" />
   </head>
   <body>
