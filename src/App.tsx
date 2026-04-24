@@ -359,7 +359,7 @@ export default function App() {
             {[
               { title: "Certificado de Conclusão", oldPrice: "27", price: "GRATUITO", img: "https://i.ibb.co/v6yd5jS3/Chat-GPT-Image-16-de-abr-de-2026-17-39-59.png", desc: "Certificado para comprovar a conclusão do material, contribuindo para o desenvolvimento profissional e fortalecimento do seu portfólio na área de segurança do trabalho." },
               { title: "Quiz Interativo", oldPrice: "33", price: "GRATUITO", img: "https://i.ibb.co/V0T5s2DF/Chat-GPT-Image-16-de-abr-de-2026-17-38-36.png", desc: "Atividades em perguntas e respostas para testar o conhecimento dos colaboradores, deixando os treinamentos mais dinâmicos e fáceis de aplicar." },
-              { title: "Cartazes Prontos de Segurança do Trabalho", oldPrice: "37", price: "GRATUITO", img: "https://i.ibb.co/MkYNqNs9/Chat-GPT-Image-16-de-abr-de-2026-17-37-56.png", desc: "Cartazes prontos para imprimir e usar na empresa, reforçando regras de segurança e prevenção de acidentes de forma prática." }
+              { title: "Cartazes Prontos de Segurança do Trabalho", oldPrice: "37", price: "GRATUITO", img: "https://i.ibb.co/274F2ZNh/Chat-GPT-Image-16-de-abr-de-2026-17-37-56.png", desc: "Cartazes prontos para imprimir e usar na empresa, reforçando regras de segurança e prevenção de acidentes de forma prática." }
             ].map((bonus, i) => (
               <motion.div 
                 key={i}
